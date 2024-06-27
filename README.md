@@ -1,11 +1,6 @@
-# news_bot
-
 **Overview**
 
-This project aims to automate the process of extracting news articles from a website, processing the data, and storing it in an Excel file. 
-The script will perform a search, extract relevant details from the latest news articles, download associated images, and save all the information in an organized format.
-This is only on PoC level, it supports only https://www.latimes.com/.
-![news_bot.png](news_bot.png)
+This project aims to automate the process of extracting news articles from a website, processing the data, and storing it in an Excel file. The script will perform a search, extract relevant details from the latest news articles, download associated images, and save all the information in an organized format. This is only on PoC level, it supports only https://www.latimes.com/. news_bot.png
 
 **Prerequisites**
 
@@ -19,18 +14,19 @@ To run this process, .env_example file should be modified with values and rename
 
 **Notes**
 
-The web page seems to be dynamic and that is why waits and retries are implemented in scrape methods. 
-From additional features the process has a counter of words in a text and checker for USD amount. 
-At the end, the Excel report is created. 
+The web page seems to be dynamic and that is why waits and retries are implemented in scrape methods. From additional features the process has a counter of words in a text and checker for USD amount. At the end, the Excel report is created.
 
 Service for sending emails is a possible addition, method is tested but currently not used.
 
-*Future improvements*
+_Future improvements_
 
 Rewrite helpers into classes to comply with OOP practices
-Implement the factory pattern for scrapers, so when you need to scrape another website you just implement the abstract
-class with custom logic and selectors for that website.
+
+Implement the factory pattern for scrapers, so when you need to scrape another website you just implement the abstract class with custom logic and selectors for that website. 
+
 Improve tests with edge cases and cover the scraper with tests.
+
+Refactor main.py and tasks.py to not repeat code. 
 
 **File Structure**
 
@@ -63,5 +59,3 @@ news_reporter/
 ├── main.py                    # Main script to run the bot
 └── requirements.txt           # Python dependencies
 </pre>
-
-
